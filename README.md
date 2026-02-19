@@ -9,6 +9,7 @@ Users can log in with **Google**, add, delete, and view their bookmarks. Bookmar
 
 https://smart-bookmark-app-aqrs.vercel.app/
 
+
 ## 📂 Features
 
 - Google OAuth authentication only
