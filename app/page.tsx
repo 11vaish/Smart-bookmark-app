@@ -131,7 +131,8 @@ export default function Home() {
           </div>
         ) : (
           <div className="bg-white rounded-xl shadow-lg p-5 sm:p-6">
-            {/* User Info */}
+
+        
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4">
               <p className="text-gray-700 font-medium text-sm sm:text-base break-all">
                 Signed in as {session.user.email}
@@ -146,31 +147,43 @@ export default function Home() {
 
             <hr className="my-4 border-gray-200" />
 
-            {/* Add Bookmark */}
+            
             <div className="flex flex-col gap-3 mb-4">
+
+           
               <input
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full border border-gray-300 rounded-lg px-3 py-2
+                ${title ? 'text-blue-600' : 'text-gray-400'}
+                placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:text-blue-700`}
                 placeholder="Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
+
+            
               <input
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className={`w-full border border-gray-300 rounded-lg px-3 py-2
+                ${url ? 'text-blue-600' : 'text-gray-400'}
+                placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:text-blue-700`}
                 placeholder="URL"
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
               />
+
               <button
                 onClick={addBookmark}
                 className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg shadow transition"
               >
                 Add Bookmark
               </button>
+
             </div>
 
             <hr className="my-4 border-gray-200" />
 
-            {/* Bookmark List */}
+          
             <h2 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3">
               Saved Bookmarks
             </h2>
@@ -198,6 +211,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+
           </div>
         )}
       </div>
