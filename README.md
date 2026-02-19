@@ -6,7 +6,7 @@ Users can log in with **Google**, add, delete, and view their bookmarks. Bookmar
 
 ## 🔗 Live Demo
 
-[https://smart-bookmark-app-nmit.vercel.app/](https://smart-bookmark-app-nmit.vercel.app/)
+https://smart-bookmark-app-five-umber.vercel.app/
 
 ## 📂 Features
 
